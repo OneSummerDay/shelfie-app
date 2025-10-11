@@ -1,17 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native';
+import Logo from '../assets/img/logo_light.png';
 
 const Home = () => {
   return (
     <View style={styles.container}>
+      <Image style={styles.image} source={Logo} />
+
       <Text style={styles.title}>The number 1</Text>
-      <Text>The number 2</Text>
-
-      <View>
-        <Text style={styles.card}>
-            Hello, this is a card component!
-        </Text>
-    </View>
-
+      <Text style={{marginTop: 10, marginBottom: 30}}>Reading List App</Text>
     </View>
   )
 }
@@ -29,10 +25,8 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         fontSize: 18,
     },
-    card: {
-        backgroundColor: "#eee",
-        padding: 10,
-        borderRadius: 5,
+    image: {
+        marginVertical: 20,
     },
-
+    
 })
